@@ -485,6 +485,41 @@ const CLIENTS = [
     "src": "images/ness/06.jpg",
     "w": 1080,
     "h": 1350
+   },
+   {
+    "src": "images/ness/07.jpg",
+    "w": 1080,
+    "h": 1350
+   },
+   {
+    "src": "images/ness/08.jpg",
+    "w": 1080,
+    "h": 1350
+   },
+   {
+    "src": "images/ness/09.jpg",
+    "w": 1080,
+    "h": 1350
+   },
+   {
+    "src": "images/ness/10.jpg",
+    "w": 1080,
+    "h": 1350
+   },
+   {
+    "src": "images/ness/11.jpg",
+    "w": 1080,
+    "h": 1350
+   },
+   {
+    "src": "images/ness/12.jpg",
+    "w": 1080,
+    "h": 1350
+   },
+   {
+    "src": "images/ness/13.jpg",
+    "w": 1080,
+    "h": 1350
    }
   ]
  },
