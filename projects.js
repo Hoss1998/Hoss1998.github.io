@@ -1141,7 +1141,7 @@ const CLIENTS = [
  },
  {
   "slug": "tmg",
-  "name": "Madinaty Sporting Club",
+  "name": "TMG · Madinaty Clubs",
   "industry": "Sports & Lifestyle",
   "images": [
    {
@@ -1161,18 +1161,28 @@ const CLIENTS = [
    },
    {
     "src": "images/tmg/04.jpg",
-    "w": 768,
-    "h": 1408
+    "w": 1080,
+    "h": 1350
    },
    {
     "src": "images/tmg/05.jpg",
-    "w": 768,
-    "h": 1408
+    "w": 1080,
+    "h": 1350
    },
    {
     "src": "images/tmg/06.jpg",
-    "w": 768,
-    "h": 1408
+    "w": 1080,
+    "h": 1350
+   },
+   {
+    "src": "images/tmg/07.jpg",
+    "w": 1080,
+    "h": 1350
+   },
+   {
+    "src": "images/tmg/08.jpg",
+    "w": 1080,
+    "h": 1350
    }
   ]
  }
