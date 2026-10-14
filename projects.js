@@ -1154,7 +1154,7 @@ const CLIENTS = [
  },
  {
   "slug": "ssm",
-  "name": "SSM Business School",
+  "name": "Swiss School of Management",
   "industry": "Education",
   "images": [
    {
@@ -1165,17 +1165,12 @@ const CLIENTS = [
    {
     "src": "images/ssm/02.jpg",
     "w": 1080,
-    "h": 1440
+    "h": 1350
    },
    {
     "src": "images/ssm/03.jpg",
     "w": 1080,
-    "h": 1440
-   },
-   {
-    "src": "images/ssm/04.jpg",
-    "w": 1080,
-    "h": 1440
+    "h": 1350
    }
   ]
  },
