@@ -942,11 +942,6 @@ const CLIENTS = [
    },
    {
     "src": "images/zanussi/09.jpg",
-    "w": 1600,
-    "h": 773
-   },
-   {
-    "src": "images/zanussi/10.jpg",
     "w": 551,
     "h": 1580
    }
