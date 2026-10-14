@@ -549,6 +549,26 @@ const CLIENTS = [
     "src": "images/saula/06.jpg",
     "w": 1080,
     "h": 1350
+   },
+   {
+    "src": "images/saula/07.jpg",
+    "w": 1080,
+    "h": 1350
+   },
+   {
+    "src": "images/saula/08.jpg",
+    "w": 1080,
+    "h": 1350
+   },
+   {
+    "src": "images/saula/09.jpg",
+    "w": 1600,
+    "h": 702
+   },
+   {
+    "src": "images/saula/10.jpg",
+    "w": 1600,
+    "h": 667
    }
   ]
  },
