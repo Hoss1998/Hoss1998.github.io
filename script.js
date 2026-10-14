@@ -1,4 +1,5 @@
 const $ = id => document.getElementById(id);
+const V = u => `${u}?v=${window.ASSET_V}`;
 const home = $("home"), page = $("client-page"), lb = $("lightbox");
 const LOGOS = new Set(["bk","wendy-s","dominos","ph","dilli","coffee-beans","bam","bimbo","brika","domty","larch","les-alpes","ness","richland","saula","dosh","lindo","skoda","ghabour-auto","kasrawy","zanussi","it-worx","raha","egy-post","nis","lycee","ssm","tmg","frappit","sweet-slim","cea"]);
 const link = c => `#/client/${c.slug}`;
@@ -6,7 +7,7 @@ const hasWork = c => c.images.length > 0;
 const WORK = CLIENTS.filter(hasWork);
 const cover = c => (c.images[1] || c.images[0]).src;
 const mark = c => LOGOS.has(c.slug)
-  ? `<img class="mark" src="logos/${c.slug}.png" alt="${c.name} logo" loading="lazy">`
+  ? `<img class="mark" src="${V(`logos/${c.slug}.png`)}" alt="${c.name} logo" loading="lazy">`
   : `<span class="wordmark">${c.name}</span>`;
 
 $("year").textContent = new Date().getFullYear();
@@ -28,7 +29,7 @@ const floaters = heroPicks.map((c, i) => {
   a.href = link(c);
   a.dataset.cursor = c.name;
   a.style.left = x + "%"; a.style.top = y + "%";
-  a.innerHTML = `<div class="floater-inner" style="animation-delay:${-i * 1.3}s"><img src="${cover(c)}" alt="${c.name}"></div>`;
+  a.innerHTML = `<div class="floater-inner" style="animation-delay:${-i * 1.3}s"><img src="${V(cover(c))}" alt="${c.name}"></div>`;
   a._r = r; a._d = .4 + (i % 4) * .25;
   $("floaters").appendChild(a);
   setTimeout(() => a.classList.add("on"), 500 + i * 120);
@@ -54,7 +55,7 @@ $("logo-wall").innerHTML = CLIENTS.map(c => !hasWork(c)
   : `
   <a class="tile" href="${link(c)}" data-cursor="View">
     ${mark(c)}
-    <div class="peek-img"><img src="${cover(c)}" alt="" loading="lazy"></div>
+    <div class="peek-img"><img src="${V(cover(c))}" alt="" loading="lazy"></div>
     <div class="tile-meta"><b>${c.name}</b><span>${c.images.length} →</span></div>
   </a>`).join("");
 
@@ -66,7 +67,7 @@ $("feature-grid").innerHTML = FEAT.map(([s, n], i) => {
   const im = c.images[Math.min(n, c.images.length - 1)];
   return `<a class="feat" href="${link(c)}" data-cursor="View">
     <span class="idx">${String(i + 1).padStart(2, "0")}</span>
-    <div class="frame"><img src="${im.src}" alt="${c.name}" loading="lazy"></div>
+    <div class="frame"><img src="${V(im.src)}" alt="${c.name}" loading="lazy"></div>
     <div class="cap"><b>${c.name}</b><span>${c.industry}</span></div></a>`;
 }).join("");
 
@@ -76,7 +77,7 @@ function gallery(gridId, items, cls) {
   const grid = $(gridId);
   grid.innerHTML = items.map((x, i) => `
     <figure class="${cls} shot" data-i="${i}" data-cursor="Zoom">
-      <img src="${x.src}" width="${x.w}" height="${x.h}" alt="${byslug(x.slug).name}" loading="lazy">
+      <img src="${V(x.src)}" width="${x.w}" height="${x.h}" alt="${byslug(x.slug).name}" loading="lazy">
       <figcaption><b>${byslug(x.slug).name}</b></figcaption>
     </figure>`).join("");
   grid.querySelectorAll("figure").forEach(f => f.onclick = () =>
@@ -146,13 +147,13 @@ function showClient(slug) {
   $("cp-industry").textContent = `${c.industry} · ${c.images.length} pieces`;
   const gal = $("cp-gallery");
   gal.innerHTML = c.images.map((im, n) =>
-    `<figure class="shot" data-n="${n}"><img src="${im.src}" width="${im.w}" height="${im.h}" alt="${c.name} ${n + 1}" loading="lazy"></figure>`).join("");
+    `<figure class="shot" data-n="${n}"><img src="${V(im.src)}" width="${im.w}" height="${im.h}" alt="${c.name} ${n + 1}" loading="lazy"></figure>`).join("");
   gal.querySelectorAll(".shot").forEach(f =>
     f.onclick = () => openLb(c.images.map(im => im.src), +f.dataset.n, c.name));
   observe(gal);
   $("cp-next").href = link(next);
   $("cp-next-name").textContent = next.name;
-  $("cp-next-img").src = cover(next);
+  $("cp-next-img").src = V(cover(next));
   // replay entrance animations
   ["cp-logo", "cp-name"].forEach(id => { const el = $(id); el.style.animation = "none"; el.offsetHeight; el.style.animation = ""; });
   home.hidden = true; page.hidden = false;
@@ -184,7 +185,7 @@ function openLb(srcs, n, caption) {
 }
 let lbCap = "";
 function showLb() {
-  $("lb-img").src = lbList[lbIndex];
+  $("lb-img").src = V(lbList[lbIndex]);
   $("lb-caption").textContent = Array.isArray(lbCap) ? lbCap[lbIndex] : lbCap;
 }
 function step(d) { lbIndex = (lbIndex + d + lbList.length) % lbList.length; showLb(); }
