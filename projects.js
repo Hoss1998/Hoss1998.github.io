@@ -888,23 +888,23 @@ const CLIENTS = [
   "images": [
    {
     "src": "images/ghabour-auto/01.jpg",
-    "w": 1080,
-    "h": 1350
+    "w": 1600,
+    "h": 900
    },
    {
     "src": "images/ghabour-auto/02.jpg",
-    "w": 1080,
-    "h": 1350
+    "w": 1600,
+    "h": 900
    },
    {
     "src": "images/ghabour-auto/03.jpg",
-    "w": 1080,
-    "h": 1350
+    "w": 1600,
+    "h": 900
    },
    {
     "src": "images/ghabour-auto/04.jpg",
-    "w": 1600,
-    "h": 900
+    "w": 1080,
+    "h": 1350
    },
    {
     "src": "images/ghabour-auto/05.jpg",
@@ -913,13 +913,8 @@ const CLIENTS = [
    },
    {
     "src": "images/ghabour-auto/06.jpg",
-    "w": 1080,
-    "h": 1350
-   },
-   {
-    "src": "images/ghabour-auto/07.jpg",
-    "w": 1080,
-    "h": 1350
+    "w": 1600,
+    "h": 900
    }
   ]
  },
