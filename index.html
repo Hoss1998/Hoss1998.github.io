@@ -4,64 +4,85 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hossam Khattab — Art Director & AI Creative</title>
-  <meta name="description" content="Portfolio of Hossam Khattab: campaign visuals, social content and AI-driven creative for brands across Egypt and the Gulf.">
+  <meta name="description" content="Portfolio of Hossam Khattab: campaign visuals, social content and AI-driven creative for 30+ brands across Egypt and the Gulf.">
   <meta property="og:title" content="Hossam Khattab — Art Director & AI Creative">
   <meta property="og:description" content="Campaign visuals, social content and AI-driven creative for 30+ brands.">
   <meta property="og:image" content="images/bk/02.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" id="cursor" aria-hidden="true"><span id="cursor-label"></span></div>
+
   <header class="nav">
-    <a href="#/" class="logo">Hossam Khattab</a>
+    <a href="#/" class="logo">HK<span>.</span></a>
     <nav>
-      <a href="#/work">Work</a>
       <a href="#/clients">Clients</a>
+      <a href="#/featured">Work</a>
       <a href="#/about">About</a>
-      <a href="#/contact">Contact</a>
+      <a href="#/contact" class="nav-cta">Let's talk</a>
     </nav>
   </header>
 
-  <!-- Home -->
+  <!-- ============ HOME ============ -->
   <main id="home">
-    <section class="hero">
-      <p class="eyebrow">Art Director & AI Creative · Cairo</p>
-      <h1>Brand images<br><em>that stop the scroll.</em></h1>
-      <p class="lede" id="lede">Campaign visuals, social content and AI-driven creative for <span id="client-count"></span> brands across Egypt and the Gulf: food, FMCG, automotive, education and more.</p>
-    </section>
-
-    <div class="marquee" aria-hidden="true"><div class="track" id="track"></div></div>
-
-    <section id="work" class="work">
-      <div class="work-head">
-        <h2>Selected work</h2>
-        <div class="filters" id="filters"></div>
+    <section class="hero" id="hero">
+      <div class="floaters" id="floaters"></div>
+      <div class="hero-type">
+        <p class="eyebrow reveal">Art Director & AI Creative — Cairo</p>
+        <h1 class="giant">
+          <span class="line"><span class="word">Hossam</span></span>
+          <span class="line"><span class="word outline">Khattab</span></span>
+        </h1>
+        <p class="hero-sub reveal">I make brands <em>impossible to scroll past</em>: key visuals, social campaigns and AI-crafted imagery for <b id="client-count"></b> brands.</p>
       </div>
-      <div class="grid" id="grid"></div>
+      <a href="#/clients" class="scroll-cue" data-cursor="Go">Scroll<span></span></a>
     </section>
+
+    <div class="band" aria-hidden="true"><div class="band-track" id="band"></div></div>
 
     <section id="clients" class="clients">
-      <h2>Clients</h2>
-      <p class="hint">Click a name to see the work.</p>
-      <div class="client-list" id="client-list"></div>
-      <img class="peek" id="peek" alt="" hidden>
+      <div class="section-head">
+        <span class="num">01</span>
+        <h2>Brands I've <em>worked with</em></h2>
+        <p>Hover a logo for a peek, click it for the full story.</p>
+      </div>
+      <div class="logo-wall" id="logo-wall"></div>
+    </section>
+
+    <section id="featured" class="featured">
+      <div class="section-head">
+        <span class="num">02</span>
+        <h2>Selected <em>pieces</em></h2>
+        <p>A handful of favourites across categories.</p>
+      </div>
+      <div class="feature-grid" id="feature-grid"></div>
     </section>
 
     <section id="about" class="about">
-      <h2>About</h2>
-      <div class="about-body">
-        <p>I'm Hossam, an art director working where classic campaign craft meets generative AI. I concept and build key visuals, social content and product imagery for brands like Burger King, Wendy's, Škoda and Domino's, and finish everything by hand in Photoshop.</p>
-        <ul class="tools">
-          <li>Art direction</li><li>Key visuals</li><li>Social content</li><li>AI image generation</li><li>Product imagery</li><li>Retouching</li>
-        </ul>
+      <div class="section-head">
+        <span class="num">03</span>
+        <h2>About</h2>
       </div>
+      <p class="statement">I'm Hossam, an art director who blends <em>classic campaign craft</em> with <em>generative AI</em> to make food look irresistible, cars look heroic and brands feel alive, then <em>finishes every pixel by hand</em>.</p>
+      <div class="stats">
+        <div><b data-count="33">0</b><span>Brands</span></div>
+        <div><b data-count="178">0</b><span>Designs here</span></div>
+        <div><b data-count="9">0</b><span>Industries</span></div>
+      </div>
+      <ul class="tools">
+        <li>Art direction</li><li>Key visuals</li><li>Social campaigns</li><li>AI image generation</li><li>Product imagery</li><li>Retouching</li><li>Photoshop</li><li>Midjourney</li><li>Higgsfield</li>
+      </ul>
     </section>
 
     <section id="contact" class="contact">
-      <h2>Let's make something.</h2>
-      <a class="mail" href="mailto:you@example.com">you@example.com</a>
+      <p class="eyebrow">Got a brief?</p>
+      <a class="mega" href="mailto:you@example.com" data-cursor="Email">
+        <span>Let's</span> <span class="outline">talk</span><span class="arrow">↗</span>
+      </a>
       <div class="socials">
         <a href="https://www.behance.net/" target="_blank" rel="noopener">Behance</a>
         <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
@@ -71,27 +92,36 @@
     </section>
   </main>
 
-  <!-- Client page -->
+  <!-- ============ CLIENT PAGE ============ -->
   <main id="client-page" hidden>
-    <section class="client-hero">
-      <a href="#/clients" class="back">← All clients</a>
-      <p class="eyebrow" id="cp-industry"></p>
-      <h1 id="cp-name"></h1>
+    <section class="cp-hero">
+      <a href="#/clients" class="back">← All brands</a>
+      <div class="cp-head">
+        <div class="cp-logo" id="cp-logo"></div>
+        <div>
+          <p class="eyebrow" id="cp-industry"></p>
+          <h1 class="cp-name" id="cp-name"></h1>
+        </div>
+      </div>
     </section>
-    <section class="client-gallery" id="cp-gallery"></section>
-    <nav class="client-nav">
-      <a id="cp-prev"></a>
-      <a id="cp-next"></a>
-    </nav>
+    <section class="cp-gallery" id="cp-gallery"></section>
+    <a class="cp-next" id="cp-next" data-cursor="Next">
+      <span class="eyebrow">Next brand</span>
+      <span class="cp-next-name" id="cp-next-name"></span>
+      <img id="cp-next-img" alt="">
+    </a>
   </main>
 
-  <footer>© <span id="year"></span> Hossam Khattab</footer>
+  <footer>
+    <span>© <span id="year"></span> Hossam Khattab</span>
+    <a href="#/" data-cursor="Top">Back to top ↑</a>
+  </footer>
 
   <div class="lightbox" id="lightbox" hidden>
     <button class="lb-close" aria-label="Close">×</button>
-    <button class="lb-arrow lb-prev" aria-label="Previous">‹</button>
+    <button class="lb-arrow lb-prev" aria-label="Previous">←</button>
     <img id="lb-img" alt="">
-    <button class="lb-arrow lb-next" aria-label="Next">›</button>
+    <button class="lb-arrow lb-next" aria-label="Next">→</button>
     <p class="lb-caption" id="lb-caption"></p>
   </div>
 
