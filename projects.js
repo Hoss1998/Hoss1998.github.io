@@ -91,23 +91,13 @@ const CLIENTS = [
   "images": [
    {
     "src": "images/dominos/01.jpg",
-    "w": 1080,
-    "h": 1350
+    "w": 1600,
+    "h": 900
    },
    {
     "src": "images/dominos/02.jpg",
-    "w": 1080,
-    "h": 1350
-   },
-   {
-    "src": "images/dominos/03.jpg",
-    "w": 1080,
-    "h": 1350
-   },
-   {
-    "src": "images/dominos/04.jpg",
-    "w": 1080,
-    "h": 1350
+    "w": 1600,
+    "h": 900
    }
   ]
  },
