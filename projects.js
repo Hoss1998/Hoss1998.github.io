@@ -187,23 +187,8 @@ const CLIENTS = [
    },
    {
     "src": "images/nalu/03.jpg",
-    "w": 1080,
-    "h": 1350
-   },
-   {
-    "src": "images/nalu/04.jpg",
-    "w": 1080,
-    "h": 1350
-   },
-   {
-    "src": "images/nalu/05.jpg",
-    "w": 1080,
-    "h": 1350
-   },
-   {
-    "src": "images/nalu/06.jpg",
-    "w": 1080,
-    "h": 1350
+    "w": 1122,
+    "h": 1402
    }
   ]
  },
