@@ -70,6 +70,44 @@ $("feature-grid").innerHTML = FEAT.map(([s, n], i) => {
     <div class="cap"><b>${c.name}</b><span>${c.industry}</span></div></a>`;
 }).join("");
 
+// ---------- Key visuals & print ----------
+const KVP = [
+  ...[1,2,3,4,5,6,7,8,9,10].map(n => ["zanussi", n, "Print"]),
+  ["les-alpes", 1, "Key Visual"], ["les-alpes", 2, "Key Visual"],
+  ["dominos", 1, "Key Visual"], ["dominos", 2, "Key Visual"],
+  ["ph", 1, "Key Visual"], ["ph", 2, "Key Visual"],
+  ["ghabour-auto", 1, "Key Visual"], ["ghabour-auto", 2, "Key Visual"], ["ghabour-auto", 3, "Key Visual"], ["ghabour-auto", 6, "Key Visual"],
+].map(([slug, n, kind]) => {
+  const c = CLIENTS.find(x => x.slug === slug);
+  const im = c && c.images[n - 1];
+  return im && { c, im, kind };
+}).filter(Boolean);
+function renderKvp(kind) {
+  const items = KVP.filter(x => kind === "All" || x.kind === kind);
+  const grid = $("kvp-grid");
+  grid.innerHTML = items.map((x, i) => `
+    <figure class="kvp-item shot" data-i="${i}" data-cursor="Zoom">
+      <img src="${x.im.src}" width="${x.im.w}" height="${x.im.h}" alt="${x.c.name} ${x.kind}" loading="lazy">
+      <figcaption><b>${x.c.name}</b><span>${x.kind}</span></figcaption>
+    </figure>`).join("");
+  grid.querySelectorAll(".kvp-item").forEach(f => f.onclick = () => {
+    const x = items[+f.dataset.i];
+    openLb(items.map(y => y.im.src), +f.dataset.i, items.map(y => `${y.c.name} · ${y.kind}`));
+  });
+  grid.querySelectorAll(".shot").forEach(el => io.observe(el));
+}
+["All", "Key Visual", "Print"].forEach((k, i) => {
+  const b = document.createElement("button");
+  b.textContent = k === "All" ? "All" : k + "s";
+  if (!i) b.classList.add("active");
+  b.onclick = () => {
+    $("kvp-filters").querySelectorAll("button").forEach(x => x.classList.remove("active"));
+    b.classList.add("active");
+    renderKvp(k);
+  };
+  $("kvp-filters").appendChild(b);
+});
+
 // ---------- Scroll reveals + counters ----------
 const io = new IntersectionObserver(es => es.forEach(e => {
   if (!e.isIntersecting) return;
@@ -82,6 +120,7 @@ const observe = root => root.querySelectorAll(".tile, .feat, .shot, [data-count]
   io.observe(el);
 });
 observe(home);
+renderKvp("All");
 function countUp(el) {
   const end = +el.dataset.count, t0 = performance.now();
   (function tick(t) {
@@ -148,13 +187,17 @@ route();
 // ---------- Lightbox ----------
 let lbList = [], lbIndex = 0;
 function openLb(srcs, n, caption) {
-  lbList = srcs; lbIndex = n;
-  $("lb-caption").textContent = caption;
-  $("lb-img").src = lbList[lbIndex];
+  lbList = srcs; lbIndex = n; lbCap = caption;
+  showLb();
   lb.hidden = false;
   document.body.style.overflow = "hidden";
 }
-function step(d) { lbIndex = (lbIndex + d + lbList.length) % lbList.length; $("lb-img").src = lbList[lbIndex]; }
+let lbCap = "";
+function showLb() {
+  $("lb-img").src = lbList[lbIndex];
+  $("lb-caption").textContent = Array.isArray(lbCap) ? lbCap[lbIndex] : lbCap;
+}
+function step(d) { lbIndex = (lbIndex + d + lbList.length) % lbList.length; showLb(); }
 function closeLb() { lb.hidden = true; document.body.style.overflow = ""; }
 lb.querySelector(".lb-close").onclick = closeLb;
 lb.querySelector(".lb-prev").onclick = e => { e.stopPropagation(); step(-1); };

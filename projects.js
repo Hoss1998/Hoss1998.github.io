@@ -924,7 +924,7 @@ const CLIENTS = [
   "images": [
    {
     "src": "images/zanussi/01.jpg",
-    "w": 1401,
+    "w": 859,
     "h": 1600
    },
    {
@@ -934,13 +934,43 @@ const CLIENTS = [
    },
    {
     "src": "images/zanussi/03.jpg",
-    "w": 859,
+    "w": 1131,
     "h": 1600
    },
    {
     "src": "images/zanussi/04.jpg",
+    "w": 1454,
+    "h": 1600
+   },
+   {
+    "src": "images/zanussi/05.jpg",
+    "w": 613,
+    "h": 1600
+   },
+   {
+    "src": "images/zanussi/06.jpg",
+    "w": 1401,
+    "h": 1600
+   },
+   {
+    "src": "images/zanussi/07.jpg",
     "w": 1600,
     "h": 773
+   },
+   {
+    "src": "images/zanussi/08.jpg",
+    "w": 1600,
+    "h": 773
+   },
+   {
+    "src": "images/zanussi/09.jpg",
+    "w": 1600,
+    "h": 773
+   },
+   {
+    "src": "images/zanussi/10.jpg",
+    "w": 551,
+    "h": 1580
    }
   ]
  },
