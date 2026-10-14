@@ -126,7 +126,7 @@ function route() {
   const hash = location.hash;
   const m = hash.match(/^#\/client\/(.+)$/);
   if (m) return showClient(m[1]);
-  document.title = "Hossam Khattab — Graphic Designer & AI Artist";
+  document.title = "Hossam Khattab — Graphic Designer and AI Artist";
   const wasHidden = home.hidden;
   page.hidden = true; home.hidden = false;
   const target = document.getElementById(hash.replace(/^#\//, ""));
