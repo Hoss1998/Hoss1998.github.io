@@ -33,7 +33,7 @@ const CLIENTS = [
    {
     "src": "images/bk/06.jpg",
     "w": 1080,
-    "h": 1440
+    "h": 1350
    },
    {
     "src": "images/bk/07.jpg",
