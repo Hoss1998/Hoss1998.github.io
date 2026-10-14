@@ -27,7 +27,7 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; color: var
 @keyframes grain { 0%,100% { transform: translate(0,0) } 20% { transform: translate(-3%,2%) } 40% { transform: translate(2%,-3%) } 60% { transform: translate(-2%,-1%) } 80% { transform: translate(3%,3%) } }
 
 /* Custom cursor */
-.cursor { position: fixed; top: 0; left: 0; width: 14px; height: 14px; margin: -7px 0 0 -7px; border-radius: 50%; background: var(--accent); z-index: 99; pointer-events: none; mix-blend-mode: difference; display: grid; place-items: center; transition: width .35s var(--ease), height .35s var(--ease), margin .35s var(--ease); }
+.cursor { position: fixed; top: 0; left: 0; will-change: transform; width: 14px; height: 14px; margin: -7px 0 0 -7px; border-radius: 50%; background: var(--accent); z-index: 99; pointer-events: none; mix-blend-mode: difference; display: grid; place-items: center; transition: width .35s var(--ease), height .35s var(--ease), margin .35s var(--ease); }
 .cursor span { font-size: .7rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: #000; opacity: 0; transition: opacity .2s; white-space: nowrap; }
 .cursor.big { width: 84px; height: 84px; margin: -42px 0 0 -42px; mix-blend-mode: normal; }
 .cursor.big span { opacity: 1; }

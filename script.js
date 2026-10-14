@@ -48,7 +48,7 @@ const floaters = heroPicks.map(({ c, im }, i) => {
 let mx = 0, my = 0, px = 0, py = 0;
 addEventListener("mousemove", e => { mx = e.clientX / innerWidth - .5; my = e.clientY / innerHeight - .5; });
 (function loop() {
-  px += (mx - px) * .06; py += (my - py) * .06;
+  px += (mx - px) * .12; py += (my - py) * .12;
   const sy = scrollY;
   floaters.forEach(f => f.style.transform =
     `translate(${px * -60 * f._d}px, ${py * -60 * f._d - sy * f._d * .35}px) rotate(${f._r}deg)`);
@@ -131,13 +131,15 @@ function countUp(el) {
 
 // ---------- Custom cursor ----------
 const cur = $("cursor"), curLabel = $("cursor-label");
-let cx = innerWidth / 2, cy = innerHeight / 2, tx = cx, ty = cy;
-addEventListener("mousemove", e => { tx = e.clientX; ty = e.clientY; });
-(function follow() {
-  cx += (tx - cx) * .2; cy += (ty - cy) * .2;
-  cur.style.transform = `translate(${cx}px, ${cy}px)`;
-  requestAnimationFrame(follow);
-})();
+// Track the pointer 1:1 (no easing) so the dot never lags behind the real mouse.
+let tx = -100, ty = -100, queued = false;
+addEventListener("mousemove", e => {
+  tx = e.clientX; ty = e.clientY;
+  if (!queued) {
+    queued = true;
+    requestAnimationFrame(() => { cur.style.transform = `translate3d(${tx}px, ${ty}px, 0)`; queued = false; });
+  }
+}, { passive: true });
 document.addEventListener("mouseover", e => {
   const t = e.target.closest("[data-cursor], .shot");
   cur.classList.toggle("big", !!t);
