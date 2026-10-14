@@ -672,8 +672,8 @@ const CLIENTS = [
   "images": [
    {
     "src": "images/lindo/01.jpg",
-    "w": 900,
-    "h": 1600
+    "w": 1080,
+    "h": 1350
    },
    {
     "src": "images/lindo/02.jpg",
@@ -684,11 +684,6 @@ const CLIENTS = [
     "src": "images/lindo/03.jpg",
     "w": 1080,
     "h": 1350
-   },
-   {
-    "src": "images/lindo/04.jpg",
-    "w": 900,
-    "h": 1600
    }
   ]
  },
