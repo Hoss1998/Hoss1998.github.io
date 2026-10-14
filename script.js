@@ -1,14 +1,19 @@
 const $ = id => document.getElementById(id);
 const home = $("home"), page = $("client-page"), lb = $("lightbox");
-const LOGOS = new Set(["bk","wendy-s","dominos","ph","dilli","coffee-beans","bam","bimbo","brika","domty","larch","les-alpes","ness","richland","saula","dosh","lindo","skoda","ghabour-auto","kasrawy","zanussi","it-worx","raha","egy-post","nis","lycee","ssm","tmg"]);
+const LOGOS = new Set(["bk","wendy-s","dominos","ph","dilli","coffee-beans","bam","bimbo","brika","domty","larch","les-alpes","ness","richland","saula","dosh","lindo","skoda","ghabour-auto","kasrawy","zanussi","it-worx","raha","egy-post","nis","lycee","ssm","tmg","frappit","sweet-slim","cea"]);
 const link = c => `#/client/${c.slug}`;
+const hasWork = c => c.images.length > 0;
+const WORK = CLIENTS.filter(hasWork);
 const cover = c => (c.images[1] || c.images[0]).src;
 const mark = c => LOGOS.has(c.slug)
   ? `<img class="mark" src="logos/${c.slug}.png" alt="${c.name} logo" loading="lazy">`
   : `<span class="wordmark">${c.name}</span>`;
 
 $("year").textContent = new Date().getFullYear();
+const industryCount = new Set(CLIENTS.map(c => c.industry)).size;
+document.querySelector("[data-count='9']").dataset.count = industryCount;
 $("client-count").textContent = CLIENTS.length + "+";
+document.querySelector("[data-count='34']").dataset.count = CLIENTS.length;
 const designCount = CLIENTS.reduce((n, c) => n + c.images.length, 0);
 document.querySelector("[data-count='178']").dataset.count = designCount;
 
@@ -44,7 +49,9 @@ const bandHtml = CLIENTS.map(c => `<span>${c.name}</span><i>✦</i>`).join("");
 $("band").innerHTML = bandHtml + bandHtml;
 
 // ---------- Logo wall ----------
-$("logo-wall").innerHTML = CLIENTS.map(c => `
+$("logo-wall").innerHTML = CLIENTS.map(c => !hasWork(c)
+  ? `<div class="tile logo-only">${mark(c)}</div>`
+  : `
   <a class="tile" href="${link(c)}" data-cursor="View">
     ${mark(c)}
     <div class="peek-img"><img src="${cover(c)}" alt="" loading="lazy"></div>
@@ -101,9 +108,9 @@ document.addEventListener("mouseover", e => {
 
 // ---------- Client page ----------
 function showClient(slug) {
-  const i = CLIENTS.findIndex(c => c.slug === slug);
-  if (i < 0) return (location.hash = "#/");
-  const c = CLIENTS[i], next = CLIENTS[(i + 1) % CLIENTS.length];
+  const i = WORK.findIndex(c => c.slug === slug);
+  if (i < 0) return (location.hash = "#/clients");
+  const c = WORK[i], next = WORK[(i + 1) % WORK.length];
   document.title = `${c.name} — Hossam Khattab`;
   $("cp-logo").innerHTML = mark(c);
   $("cp-name").textContent = c.name;

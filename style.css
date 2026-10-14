@@ -86,17 +86,18 @@ h2 em { text-transform: none; font-size: 1.05em; }
 
 /* Logo wall */
 .logo-wall { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 210px), 1fr)); gap: 10px; }
-.tile { position: relative; aspect-ratio: 1; background: var(--paper); border-radius: 6px; overflow: hidden; display: grid; place-items: center; isolation: isolate; opacity: 0; transform: translateY(30px) scale(.97); transition: opacity .8s var(--ease), transform .8s var(--ease); }
+.tile { position: relative; aspect-ratio: 1; background: #000; border: 1px solid #1d1c19; border-radius: 6px; overflow: hidden; display: grid; place-items: center; isolation: isolate; opacity: 0; transform: translateY(30px) scale(.97); transition: opacity .8s var(--ease), transform .8s var(--ease); }
 .tile.in { opacity: 1; transform: none; }
 .tile .mark { width: 62%; height: 42%; object-fit: contain; transition: transform .6s var(--ease), opacity .4s; }
-.tile .wordmark { font-family: var(--display); color: #141414; font-size: clamp(1.4rem, 2.2vw, 2rem); text-transform: uppercase; text-align: center; line-height: 1; padding: 0 1rem; transition: transform .6s var(--ease), opacity .4s; }
+.tile .wordmark { font-family: var(--display); color: var(--fg); font-size: clamp(1.4rem, 2.2vw, 2rem); text-transform: uppercase; text-align: center; line-height: 1; padding: 0 1rem; transition: transform .6s var(--ease), opacity .4s; }
 .tile .peek-img { position: absolute; inset: 0; z-index: -1; transform: translateY(101%); transition: transform .7s var(--ease); }
 .tile .peek-img::after { content: ""; position: absolute; inset: 0; background: linear-gradient(transparent 40%, rgba(0,0,0,.85)); }
 .tile .tile-meta { position: absolute; left: 1rem; right: 1rem; bottom: .9rem; display: flex; justify-content: space-between; align-items: end; gap: .5rem; color: #fff; font-size: .8rem; opacity: 0; transform: translateY(150%); transition: transform .7s var(--ease), opacity .4s; }
 .tile .tile-meta b { font-family: var(--display); font-weight: 400; font-size: 1.25rem; text-transform: uppercase; line-height: 1.05; }
 .tile .tile-meta span { color: var(--accent); white-space: nowrap; }
 .tile:hover .peek-img, .tile:hover .tile-meta { transform: none; opacity: 1; }
-.tile:hover .mark, .tile:hover .wordmark { transform: translateY(-160%) scale(.8); opacity: 0; }
+.tile.logo-only:hover .mark, .tile.logo-only:hover .wordmark { transform: scale(1.06); opacity: 1; }
+.tile:not(.logo-only):hover .mark, .tile:not(.logo-only):hover .wordmark { transform: translateY(-160%) scale(.8); opacity: 0; }
 
 /* Featured editorial grid */
 .feature-grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 1.4rem; align-items: start; }
@@ -143,9 +144,9 @@ footer a:hover { color: var(--accent); }
 .back { display: inline-block; color: var(--muted); font-size: .85rem; margin-bottom: 3rem; }
 .back:hover { color: var(--accent); }
 .cp-head { display: flex; align-items: center; gap: 3vw; flex-wrap: wrap; }
-.cp-logo { width: clamp(140px, 18vw, 240px); aspect-ratio: 1; background: var(--paper); border-radius: 6px; display: grid; place-items: center; animation: pop .9s var(--ease); }
+.cp-logo { width: clamp(140px, 18vw, 240px); aspect-ratio: 1; background: #000; border: 1px solid #1d1c19; border-radius: 6px; display: grid; place-items: center; animation: pop .9s var(--ease); }
 .cp-logo img { width: 66%; height: 50%; object-fit: contain; }
-.cp-logo .wordmark { font-family: var(--display); color: #141414; font-size: clamp(1.2rem, 2vw, 1.8rem); text-transform: uppercase; text-align: center; line-height: 1; padding: 0 .8rem; }
+.cp-logo .wordmark { font-family: var(--display); color: var(--fg); font-size: clamp(1.2rem, 2vw, 1.8rem); text-transform: uppercase; text-align: center; line-height: 1; padding: 0 .8rem; }
 @keyframes pop { from { transform: scale(.85) rotate(-6deg); opacity: 0; } }
 .cp-name { font-family: var(--display); font-weight: 400; text-transform: uppercase; font-size: clamp(3.5rem, 11vw, 10rem); line-height: .9; margin-top: .6rem; animation: fade 1s var(--ease); }
 .cp-gallery { columns: 3 320px; column-gap: 1.2rem; padding-top: 0; }

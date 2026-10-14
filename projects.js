@@ -482,38 +482,7 @@ const CLIENTS = [
   "slug": "richland",
   "name": "Rich Land",
   "industry": "FMCG",
-  "images": [
-   {
-    "src": "images/richland/01.jpg",
-    "w": 1080,
-    "h": 1350
-   },
-   {
-    "src": "images/richland/02.jpg",
-    "w": 1080,
-    "h": 1350
-   },
-   {
-    "src": "images/richland/03.jpg",
-    "w": 1080,
-    "h": 1350
-   },
-   {
-    "src": "images/richland/04.jpg",
-    "w": 1080,
-    "h": 1350
-   },
-   {
-    "src": "images/richland/05.jpg",
-    "w": 1080,
-    "h": 1350
-   },
-   {
-    "src": "images/richland/06.jpg",
-    "w": 1080,
-    "h": 1350
-   }
-  ]
+  "images": []
  },
  {
   "slug": "saula",
@@ -576,65 +545,13 @@ const CLIENTS = [
   "slug": "frappit",
   "name": "Yalla Frappit",
   "industry": "FMCG",
-  "images": [
-   {
-    "src": "images/frappit/01.jpg",
-    "w": 1080,
-    "h": 1350
-   },
-   {
-    "src": "images/frappit/02.jpg",
-    "w": 1080,
-    "h": 1350
-   },
-   {
-    "src": "images/frappit/03.jpg",
-    "w": 1080,
-    "h": 1350
-   },
-   {
-    "src": "images/frappit/04.jpg",
-    "w": 880,
-    "h": 1184
-   },
-   {
-    "src": "images/frappit/05.jpg",
-    "w": 1600,
-    "h": 863
-   }
-  ]
+  "images": []
  },
  {
   "slug": "sweet-slim",
   "name": "Sweet & Slim",
   "industry": "FMCG",
-  "images": [
-   {
-    "src": "images/sweet-slim/01.jpg",
-    "w": 1080,
-    "h": 1440
-   },
-   {
-    "src": "images/sweet-slim/02.jpg",
-    "w": 1080,
-    "h": 1440
-   },
-   {
-    "src": "images/sweet-slim/03.jpg",
-    "w": 1080,
-    "h": 1350
-   },
-   {
-    "src": "images/sweet-slim/04.jpg",
-    "w": 1080,
-    "h": 1350
-   },
-   {
-    "src": "images/sweet-slim/05.jpg",
-    "w": 1080,
-    "h": 1350
-   }
-  ]
+  "images": []
  },
  {
   "slug": "dosh",
@@ -1232,5 +1149,11 @@ const CLIENTS = [
     "h": 1350
    }
   ]
+ },
+ {
+  "slug": "cea",
+  "name": "Cotton Egypt Association",
+  "industry": "Textiles",
+  "images": []
  }
 ];
