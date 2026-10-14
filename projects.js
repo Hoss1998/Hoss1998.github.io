@@ -354,8 +354,8 @@ const CLIENTS = [
    },
    {
     "src": "images/larch/03.jpg",
-    "w": 1199,
-    "h": 1600
+    "w": 1080,
+    "h": 1350
    },
    {
     "src": "images/larch/04.jpg",
@@ -374,11 +374,36 @@ const CLIENTS = [
    },
    {
     "src": "images/larch/07.jpg",
-    "w": 1122,
-    "h": 1402
+    "w": 1080,
+    "h": 1350
    },
    {
     "src": "images/larch/08.jpg",
+    "w": 1080,
+    "h": 1350
+   },
+   {
+    "src": "images/larch/09.jpg",
+    "w": 1080,
+    "h": 1350
+   },
+   {
+    "src": "images/larch/10.jpg",
+    "w": 1080,
+    "h": 1350
+   },
+   {
+    "src": "images/larch/11.jpg",
+    "w": 1080,
+    "h": 1350
+   },
+   {
+    "src": "images/larch/12.jpg",
+    "w": 1289,
+    "h": 1600
+   },
+   {
+    "src": "images/larch/13.jpg",
     "w": 1080,
     "h": 1350
    }
