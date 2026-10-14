@@ -7,6 +7,36 @@ const KEY_VISUALS = [
   "h": 900
  },
  {
+  "slug": "bam",
+  "src": "images/kv/bam-02.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ {
+  "slug": "bam",
+  "src": "images/kv/bam-03.jpg",
+  "w": 1600,
+  "h": 901
+ },
+ {
+  "slug": "bam",
+  "src": "images/kv/bam-04.jpg",
+  "w": 1600,
+  "h": 901
+ },
+ {
+  "slug": "bam",
+  "src": "images/kv/bam-05.jpg",
+  "w": 1600,
+  "h": 901
+ },
+ {
+  "slug": "bam",
+  "src": "images/kv/bam-06.jpg",
+  "w": 1600,
+  "h": 901
+ },
+ {
   "slug": "bimbo",
   "src": "images/kv/bimbo-01.jpg",
   "w": 1600,
@@ -123,6 +153,12 @@ const KEY_VISUALS = [
  {
   "slug": "ghabour-auto",
   "src": "images/kv/ghabour-auto-06.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ {
+  "slug": "ghabour-auto",
+  "src": "images/kv/ghabour-auto-07.jpg",
   "w": 1600,
   "h": 900
  },
@@ -309,6 +345,18 @@ const KEY_VISUALS = [
  {
   "slug": "zanussi",
   "src": "images/kv/zanussi-02.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ {
+  "slug": "lindo",
+  "src": "images/kv/lindo-01.jpg",
+  "w": 1600,
+  "h": 900
+ },
+ {
+  "slug": "wendy-s",
+  "src": "images/kv/wendy-s-01.jpg",
   "w": 1600,
   "h": 900
  }
