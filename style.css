@@ -149,6 +149,8 @@ h2 em { text-transform: none; font-size: 1.05em; }
 .mega:hover .outline { color: var(--accent); -webkit-text-stroke-color: var(--accent); }
 .mega .arrow { font-family: var(--sans); font-size: .35em; color: var(--accent); transition: transform .5s var(--ease); }
 .mega:hover .arrow { transform: translate(10px, -10px) rotate(10deg); }
+.email-line { display: inline-block; font-family: var(--serif); font-size: clamp(1.4rem, 3vw, 2.4rem); border-bottom: 1px solid var(--line); margin: -1.5rem 0 3rem; transition: color .3s, border-color .3s; }
+.email-line:hover { color: var(--accent); border-color: var(--accent); }
 .socials { display: flex; flex-wrap: wrap; gap: 2.5rem; font-size: .9rem; color: var(--muted); }
 .socials a:hover { color: var(--accent); }
 
