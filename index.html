@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hady — AI Creative Director</title>
+  <meta name="description" content="Portfolio of Hady: AI creative and generative image & video work.">
+  <meta property="og:title" content="Hady — AI Creative Director">
+  <meta property="og:description" content="AI creative and generative image & video work.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav">
+    <a href="#top" class="logo">Hady</a>
+    <nav>
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <p class="eyebrow">AI Creative Director · Cairo</p>
+      <h1>Images that never existed,<br><em>made to feel real.</em></h1>
+      <p class="lede">I direct generative image and video for brands: food, automotive, fashion and beyond. Photographic craft, AI speed.</p>
+    </section>
+
+    <section id="work" class="work">
+      <div class="work-head">
+        <h2>Selected work</h2>
+        <div class="filters" id="filters"></div>
+      </div>
+      <div class="grid" id="grid"></div>
+    </section>
+
+    <section id="about" class="about">
+      <h2>About</h2>
+      <div class="about-body">
+        <p>I'm Hady, a creative working where art direction meets generative AI. I build campaign visuals, social content and motion with tools like Higgsfield, Kling, Seedance and Nano Banana, then finish them in Photoshop and After Effects.</p>
+        <ul class="tools">
+          <li>Art direction</li><li>AI image generation</li><li>AI video</li><li>Prompt design</li><li>Retouching</li><li>Motion</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Let's make something.</h2>
+      <a class="mail" href="mailto:you@example.com">you@example.com</a>
+      <div class="socials">
+        <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.behance.net/" target="_blank" rel="noopener">Behance</a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/Hoss1998" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>© <span id="year"></span> Hady</footer>
+
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lb-close" aria-label="Close">×</button>
+    <div class="lb-media" id="lb-media"></div>
+    <div class="lb-info">
+      <h3 id="lb-title"></h3>
+      <p id="lb-desc"></p>
+      <p class="lb-tools" id="lb-tools"></p>
+    </div>
+  </div>
+
+  <script src="projects.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
