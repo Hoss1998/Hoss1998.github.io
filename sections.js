@@ -227,18 +227,6 @@ const KEY_VISUALS = [
   "src": "images/kv/bam-05.jpg",
   "w": 1600,
   "h": 901
- },
- {
-  "slug": "lindo",
-  "src": "images/kv/lindo-01.jpg",
-  "w": 1600,
-  "h": 900
- },
- {
-  "slug": "wendy-s",
-  "src": "images/kv/wendy-s-01.jpg",
-  "w": 1600,
-  "h": 900
  }
 ];
 const PRINTS = [

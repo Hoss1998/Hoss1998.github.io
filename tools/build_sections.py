@@ -25,8 +25,6 @@ KV = [  # (client slug, list index)
     # Extra KVs: absolute paths (PSD renders live in ~/portfolio-src/kv)
     *[("bam", f"~/portfolio-src/kv/bam-{n}.png") for n in (1, 2, 3, 4, 5)],
     ("ghabour-auto", "~/Desktop/Hoss/Ghabour Auto/Designs/U8/GB POST 3 1.png"),
-    ("lindo", "~/portfolio-src/kv/lindo.png"),
-    ("wendy-s", "~/portfolio-src/kv/wendys.png"),
 ]
 BILLBOARDS = [("kasrawy", i) for i in range(21, 26)]
 
