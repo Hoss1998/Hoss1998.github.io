@@ -318,7 +318,7 @@ const CLIENTS = [
    {
     "src": "images/domty/03.jpg",
     "w": 1080,
-    "h": 1440
+    "h": 1350
    },
    {
     "src": "images/domty/04.jpg",
