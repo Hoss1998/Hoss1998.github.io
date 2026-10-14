@@ -1015,38 +1015,7 @@ const CLIENTS = [
   "slug": "egy-post",
   "name": "Egypt Post",
   "industry": "Services",
-  "images": [
-   {
-    "src": "images/egy-post/01.jpg",
-    "w": 1080,
-    "h": 1350
-   },
-   {
-    "src": "images/egy-post/02.jpg",
-    "w": 1080,
-    "h": 1350
-   },
-   {
-    "src": "images/egy-post/03.jpg",
-    "w": 1080,
-    "h": 1350
-   },
-   {
-    "src": "images/egy-post/04.jpg",
-    "w": 1080,
-    "h": 1350
-   },
-   {
-    "src": "images/egy-post/05.jpg",
-    "w": 1080,
-    "h": 1350
-   },
-   {
-    "src": "images/egy-post/06.jpg",
-    "w": 1080,
-    "h": 1350
-   }
-  ]
+  "images": []
  },
  {
   "slug": "nis",
