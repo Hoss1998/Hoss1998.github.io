@@ -332,16 +332,6 @@ const CLIENTS = [
     "src": "images/brika/03.jpg",
     "w": 1080,
     "h": 1350
-   },
-   {
-    "src": "images/brika/04.jpg",
-    "w": 1122,
-    "h": 1402
-   },
-   {
-    "src": "images/brika/05.jpg",
-    "w": 1086,
-    "h": 1448
    }
   ]
  },

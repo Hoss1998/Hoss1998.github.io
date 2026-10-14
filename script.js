@@ -9,6 +9,8 @@ const mark = c => LOGOS.has(c.slug)
 
 $("year").textContent = new Date().getFullYear();
 $("client-count").textContent = CLIENTS.length + "+";
+const designCount = CLIENTS.reduce((n, c) => n + c.images.length, 0);
+document.querySelector("[data-count='178']").dataset.count = designCount;
 
 // ---------- Hero: floating work cards with mouse parallax ----------
 const SPOTS = [[6,14,-8],[22,6,5],[70,10,7],[86,22,-6],[60,30,-3],[80,52,9],[40,8,-4],[92,62,4]];
