@@ -20,16 +20,26 @@ document.querySelector("[data-count='178']").dataset.count = designCount;
 
 // ---------- Hero: floating work cards with mouse parallax ----------
 const SPOTS = [[6,14,-8],[22,6,5],[70,10,7],[86,22,-6],[60,30,-3],[80,52,9],[40,8,-4],[92,62,4]];
-const heroPicks = ["bk","wendy-s","skoda","bam","dominos","les-alpes","larch","ghabour-auto"]
-  .map(s => CLIENTS.find(c => c.slug === s)).filter(Boolean);
-const floaters = heroPicks.map((c, i) => {
+// Random every visit: different brands, a random design from each, never repeated on the page.
+const shuffle = a => { a = [...a]; for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+const pick = a => a[Math.floor(Math.random() * a.length)];
+const usedSrc = new Set();
+const randomPiece = c => {
+  const fresh = c.images.filter(im => !usedSrc.has(im.src) && im.h >= im.w);  // portrait/square read best in cards
+  const im = pick(fresh.length ? fresh : c.images);
+  usedSrc.add(im.src);
+  return im;
+};
+const order = shuffle(WORK);
+const heroPicks = order.slice(0, SPOTS.length).map(c => ({ c, im: randomPiece(c) }));
+const floaters = heroPicks.map(({ c, im }, i) => {
   const [x, y, r] = SPOTS[i];
   const a = document.createElement("a");
   a.className = "floater";
   a.href = link(c);
   a.dataset.cursor = c.name;
   a.style.left = x + "%"; a.style.top = y + "%";
-  a.innerHTML = `<div class="floater-inner" style="animation-delay:${-i * 1.3}s"><img src="${V(cover(c))}" alt="${c.name}"></div>`;
+  a.innerHTML = `<div class="floater-inner" style="animation-delay:${-i * 1.3}s"><img src="${V(im.src)}" alt="${c.name}"></div>`;
   a._r = r; a._d = .4 + (i % 4) * .25;
   $("floaters").appendChild(a);
   setTimeout(() => a.classList.add("on"), 500 + i * 120);
@@ -60,11 +70,9 @@ $("logo-wall").innerHTML = CLIENTS.map(c => !hasWork(c)
   </a>`).join("");
 
 // ---------- Featured ----------
-const FEAT = [["bk",1],["skoda",1],["les-alpes",4],["bam",3],["wendy-s",2],["larch",5],["dilli",5],["ghabour-auto",6],["ness",3],["kasrawy",4],["saula",2],["dosh",2]];
-$("feature-grid").innerHTML = FEAT.map(([s, n], i) => {
-  const c = CLIENTS.find(x => x.slug === s);
-  if (!c) return "";
-  const im = c.images[Math.min(n, c.images.length - 1)];
+const FEAT = shuffle([...order.slice(SPOTS.length), ...order.slice(0, SPOTS.length)]).slice(0, 12);
+$("feature-grid").innerHTML = FEAT.map((c, i) => {
+  const im = randomPiece(c);
   return `<a class="feat" href="${link(c)}" data-cursor="View">
     <span class="idx">${String(i + 1).padStart(2, "0")}</span>
     <div class="frame"><img src="${V(im.src)}" alt="${c.name}" loading="lazy"></div>
