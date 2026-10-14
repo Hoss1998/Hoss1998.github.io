@@ -268,11 +268,6 @@ const CLIENTS = [
     "src": "images/bam/07.jpg",
     "w": 1080,
     "h": 1350
-   },
-   {
-    "src": "images/bam/08.jpg",
-    "w": 1080,
-    "h": 1350
    }
   ]
  },
