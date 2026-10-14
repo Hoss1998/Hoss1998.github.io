@@ -69,16 +69,6 @@ $("logo-wall").innerHTML = CLIENTS.map(c => !hasWork(c)
     <div class="tile-meta"><b>${c.name}</b><span>${c.images.length} →</span></div>
   </a>`).join("");
 
-// ---------- Featured ----------
-const FEAT = shuffle([...order.slice(SPOTS.length), ...order.slice(0, SPOTS.length)]).slice(0, 12);
-$("feature-grid").innerHTML = FEAT.map((c, i) => {
-  const im = randomPiece(c);
-  return `<a class="feat" href="${link(c)}" data-cursor="View">
-    <span class="idx">${String(i + 1).padStart(2, "0")}</span>
-    <div class="frame"><img src="${V(im.src)}" alt="${c.name}" loading="lazy"></div>
-    <div class="cap"><b>${c.name}</b><span>${c.industry}</span></div></a>`;
-}).join("");
-
 // ---------- Key visuals & print ----------
 const byslug = slug => CLIENTS.find(c => c.slug === slug);
 function gallery(gridId, items, cls) {
@@ -92,6 +82,24 @@ function gallery(gridId, items, cls) {
     openLb(items.map(x => x.src), +f.dataset.i, items.map(x => byslug(x.slug).name)));
   if (typeof io !== "undefined") grid.querySelectorAll(".shot").forEach(el => io.observe(el));
 }
+// ---------- Social media designs (client pages, except print-only brands) ----------
+const SOCIAL_SKIP = new Set(["zanussi"]);
+const isPost = im => im.w <= im.h * 1.3;  // wide 16:9 pieces are KVs, shown in their own section
+const socialClients = WORK.filter(c => !SOCIAL_SKIP.has(c.slug) && c.images.some(isPost));
+const SOCIAL = socialClients.flatMap(c => c.images.filter(isPost).map(im => ({ slug: c.slug, ...im })));
+$("social-count").textContent = `${SOCIAL.length} posts across ${socialClients.length} brands.`;
+["all", ...[...socialClients].sort((a, b) => a.name.localeCompare(b.name)).map(c => c.slug)].forEach((slug, i) => {
+  const b = document.createElement("button");
+  b.textContent = slug === "all" ? "All" : byslug(slug).name;
+  if (!i) b.classList.add("active");
+  b.onclick = () => {
+    $("social-filters").querySelectorAll("button").forEach(x => x.classList.remove("active"));
+    b.classList.add("active");
+    gallery("social-grid", slug === "all" ? shuffle(SOCIAL) : SOCIAL.filter(x => x.slug === slug), "social-item");
+  };
+  $("social-filters").appendChild(b);
+});
+
 const kvBrands = [...new Set(KEY_VISUALS.map(x => x.slug))];
 $("kv-count").textContent = `${KEY_VISUALS.length} campaign key visuals across ${kvBrands.length} brands.`;
 ["all", ...kvBrands].forEach((slug, i) => {
@@ -118,6 +126,7 @@ const observe = root => root.querySelectorAll(".tile, .feat, .shot, [data-count]
   io.observe(el);
 });
 observe(home);
+gallery("social-grid", shuffle(SOCIAL), "social-item");
 gallery("kv-grid", KEY_VISUALS, "kv-item");
 gallery("print-grid", PRINTS, "print-item");
 function countUp(el) {
