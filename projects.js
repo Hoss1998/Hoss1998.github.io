@@ -626,28 +626,6 @@ const CLIENTS = [
   ]
  },
  {
-  "slug": "delilah",
-  "name": "Delilah",
-  "industry": "Personal Care",
-  "images": [
-   {
-    "src": "images/delilah/01.jpg",
-    "w": 1080,
-    "h": 1080
-   },
-   {
-    "src": "images/delilah/02.jpg",
-    "w": 1080,
-    "h": 1080
-   },
-   {
-    "src": "images/delilah/03.jpg",
-    "w": 1080,
-    "h": 1080
-   }
-  ]
- },
- {
   "slug": "lindo",
   "name": "Lindo",
   "industry": "Personal Care",
@@ -971,28 +949,6 @@ const CLIENTS = [
     "src": "images/zanussi/10.jpg",
     "w": 551,
     "h": 1580
-   }
-  ]
- },
- {
-  "slug": "etisalat",
-  "name": "Etisalat",
-  "industry": "Telecom & Tech",
-  "images": [
-   {
-    "src": "images/etisalat/01.jpg",
-    "w": 1226,
-    "h": 1600
-   },
-   {
-    "src": "images/etisalat/02.jpg",
-    "w": 1080,
-    "h": 1350
-   },
-   {
-    "src": "images/etisalat/03.jpg",
-    "w": 1080,
-    "h": 1350
    }
   ]
  },
