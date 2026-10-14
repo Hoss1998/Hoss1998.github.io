@@ -653,31 +653,21 @@ const CLIENTS = [
   "images": [
    {
     "src": "images/dosh/01.jpg",
-    "w": 900,
-    "h": 1600
+    "w": 1080,
+    "h": 1350
    },
    {
     "src": "images/dosh/02.jpg",
-    "w": 900,
-    "h": 1600
+    "w": 1080,
+    "h": 1350
    },
    {
     "src": "images/dosh/03.jpg",
     "w": 1080,
-    "h": 1440
+    "h": 1350
    },
    {
     "src": "images/dosh/04.jpg",
-    "w": 1080,
-    "h": 1350
-   },
-   {
-    "src": "images/dosh/05.jpg",
-    "w": 1080,
-    "h": 1350
-   },
-   {
-    "src": "images/dosh/06.jpg",
     "w": 1080,
     "h": 1350
    }
