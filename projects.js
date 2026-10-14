@@ -157,6 +157,16 @@ const CLIENTS = [
     "src": "images/dilli/07.jpg",
     "w": 1080,
     "h": 1350
+   },
+   {
+    "src": "images/dilli/08.jpg",
+    "w": 1080,
+    "h": 1350
+   },
+   {
+    "src": "images/dilli/09.jpg",
+    "w": 1080,
+    "h": 1350
    }
   ]
  },
