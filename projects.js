@@ -79,6 +79,26 @@ const CLIENTS = [
    },
    {
     "src": "images/wendy-s/06.jpg",
+    "w": 900,
+    "h": 1600
+   },
+   {
+    "src": "images/wendy-s/07.jpg",
+    "w": 1080,
+    "h": 1350
+   },
+   {
+    "src": "images/wendy-s/08.jpg",
+    "w": 1080,
+    "h": 1350
+   },
+   {
+    "src": "images/wendy-s/09.jpg",
+    "w": 1080,
+    "h": 1350
+   },
+   {
+    "src": "images/wendy-s/10.jpg",
     "w": 1080,
     "h": 1350
    }
