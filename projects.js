@@ -108,7 +108,33 @@ const CLIENTS = [
   "slug": "dominos",
   "name": "Domino's",
   "industry": "Food & Beverage",
-  "images": []
+  "images": [
+   {
+    "src": "images/kv/dominos-01.jpg",
+    "w": 1600,
+    "h": 900
+   },
+   {
+    "src": "images/kv/dominos-02.jpg",
+    "w": 1600,
+    "h": 900
+   },
+   {
+    "src": "images/kv/dominos-03.jpg",
+    "w": 1600,
+    "h": 900
+   },
+   {
+    "src": "images/kv/dominos-04.jpg",
+    "w": 1600,
+    "h": 900
+   },
+   {
+    "src": "images/kv/dominos-05.jpg",
+    "w": 1600,
+    "h": 900
+   }
+  ]
  },
  {
   "slug": "ph",

@@ -56,6 +56,7 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; color: var
 @keyframes rise { to { transform: none; } }
 .reveal { opacity: 0; animation: fade 1s .6s var(--ease) forwards; }
 @keyframes fade { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+.role { display: inline-block; font-family: var(--display); font-size: clamp(1.4rem, 2.6vw, 2.4rem); letter-spacing: .06em; text-transform: uppercase; color: var(--bg); background: var(--accent); padding: .35rem 1rem .25rem; border-radius: 4px; line-height: 1.1; }
 .hero-sub { max-width: 30rem; font-size: 1.1rem; color: #c9c4b8; }
 .hero-sub b { color: var(--fg); font-weight: 500; }
 .scroll-cue { position: absolute; right: 4vw; bottom: 9vh; z-index: 2; writing-mode: vertical-rl; font-size: .7rem; letter-spacing: .3em; text-transform: uppercase; color: var(--muted); display: flex; align-items: center; gap: 1rem; }

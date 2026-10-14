@@ -30,7 +30,7 @@ const randomPiece = c => {
   usedSrc.add(im.src);
   return im;
 };
-const order = shuffle(WORK);
+const order = shuffle(WORK.filter(c => c.images.some(im => im.h >= im.w)));  // hero uses brands with post-format work
 const heroPicks = order.slice(0, SPOTS.length).map(c => ({ c, im: randomPiece(c) }));
 const floaters = heroPicks.map(({ c, im }, i) => {
   const [x, y, r] = SPOTS[i];
@@ -184,7 +184,7 @@ function route() {
   const hash = location.hash;
   const m = hash.match(/^#\/client\/(.+)$/);
   if (m) return showClient(m[1]);
-  document.title = "Hossam Khattab — Graphic Designer and AI Artist";
+  document.title = "Hossam Khattab — Graphic Designer";
   const wasHidden = home.hidden;
   page.hidden = true; home.hidden = false;
   const target = document.getElementById(hash.replace(/^#\//, ""));
