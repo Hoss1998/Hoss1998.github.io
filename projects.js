@@ -1133,6 +1133,43 @@ const CLIENTS = [
   ]
  },
  {
+  "slug": "lycee",
+  "name": "Lycée Français Simone de Beauvoir",
+  "industry": "Education",
+  "images": [
+   {
+    "src": "images/lycee/01.jpg",
+    "w": 1080,
+    "h": 1350
+   },
+   {
+    "src": "images/lycee/02.jpg",
+    "w": 1080,
+    "h": 1350
+   },
+   {
+    "src": "images/lycee/03.jpg",
+    "w": 1080,
+    "h": 1350
+   },
+   {
+    "src": "images/lycee/04.jpg",
+    "w": 1080,
+    "h": 1350
+   },
+   {
+    "src": "images/lycee/05.jpg",
+    "w": 1080,
+    "h": 1350
+   },
+   {
+    "src": "images/lycee/06.jpg",
+    "w": 1080,
+    "h": 1350
+   }
+  ]
+ },
+ {
   "slug": "ssm",
   "name": "Swiss School of Management",
   "industry": "Education",

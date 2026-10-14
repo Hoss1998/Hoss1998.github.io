@@ -1,6 +1,6 @@
 const $ = id => document.getElementById(id);
 const home = $("home"), page = $("client-page"), lb = $("lightbox");
-const LOGOS = new Set(["bk","wendy-s","dominos","ph","dilli","coffee-beans","bam","bimbo","brika","domty","larch","les-alpes","ness","richland","saula","dosh","lindo","skoda","ghabour-auto","kasrawy","zanussi","it-worx","raha","egy-post","nis","ssm","tmg"]);
+const LOGOS = new Set(["bk","wendy-s","dominos","ph","dilli","coffee-beans","bam","bimbo","brika","domty","larch","les-alpes","ness","richland","saula","dosh","lindo","skoda","ghabour-auto","kasrawy","zanussi","it-worx","raha","egy-post","nis","lycee","ssm","tmg"]);
 const link = c => `#/client/${c.slug}`;
 const cover = c => (c.images[1] || c.images[0]).src;
 const mark = c => LOGOS.has(c.slug)
