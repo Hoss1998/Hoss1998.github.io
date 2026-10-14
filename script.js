@@ -71,41 +71,30 @@ $("feature-grid").innerHTML = FEAT.map(([s, n], i) => {
 }).join("");
 
 // ---------- Key visuals & print ----------
-const KVP = [
-  ...[1,2,3,4,5,6,7,8,9,10].map(n => ["zanussi", n, "Print"]),
-  ["les-alpes", 1, "Key Visual"], ["les-alpes", 2, "Key Visual"],
-  ["dominos", 1, "Key Visual"], ["dominos", 2, "Key Visual"],
-  ["ph", 1, "Key Visual"], ["ph", 2, "Key Visual"],
-  ["ghabour-auto", 1, "Key Visual"], ["ghabour-auto", 2, "Key Visual"], ["ghabour-auto", 3, "Key Visual"], ["ghabour-auto", 6, "Key Visual"],
-].map(([slug, n, kind]) => {
-  const c = CLIENTS.find(x => x.slug === slug);
-  const im = c && c.images[n - 1];
-  return im && { c, im, kind };
-}).filter(Boolean);
-function renderKvp(kind) {
-  const items = KVP.filter(x => kind === "All" || x.kind === kind);
-  const grid = $("kvp-grid");
+const byslug = slug => CLIENTS.find(c => c.slug === slug);
+function gallery(gridId, items, cls) {
+  const grid = $(gridId);
   grid.innerHTML = items.map((x, i) => `
-    <figure class="kvp-item shot" data-i="${i}" data-cursor="Zoom">
-      <img src="${x.im.src}" width="${x.im.w}" height="${x.im.h}" alt="${x.c.name} ${x.kind}" loading="lazy">
-      <figcaption><b>${x.c.name}</b><span>${x.kind}</span></figcaption>
+    <figure class="${cls} shot" data-i="${i}" data-cursor="Zoom">
+      <img src="${x.src}" width="${x.w}" height="${x.h}" alt="${byslug(x.slug).name}" loading="lazy">
+      <figcaption><b>${byslug(x.slug).name}</b></figcaption>
     </figure>`).join("");
-  grid.querySelectorAll(".kvp-item").forEach(f => f.onclick = () => {
-    const x = items[+f.dataset.i];
-    openLb(items.map(y => y.im.src), +f.dataset.i, items.map(y => `${y.c.name} · ${y.kind}`));
-  });
-  grid.querySelectorAll(".shot").forEach(el => io.observe(el));
+  grid.querySelectorAll("figure").forEach(f => f.onclick = () =>
+    openLb(items.map(x => x.src), +f.dataset.i, items.map(x => byslug(x.slug).name)));
+  if (typeof io !== "undefined") grid.querySelectorAll(".shot").forEach(el => io.observe(el));
 }
-["All", "Key Visual", "Print"].forEach((k, i) => {
+const kvBrands = [...new Set(KEY_VISUALS.map(x => x.slug))];
+$("kv-count").textContent = `${KEY_VISUALS.length} campaign key visuals across ${kvBrands.length} brands.`;
+["all", ...kvBrands].forEach((slug, i) => {
   const b = document.createElement("button");
-  b.textContent = k === "All" ? "All" : k + "s";
+  b.textContent = slug === "all" ? "All" : byslug(slug).name;
   if (!i) b.classList.add("active");
   b.onclick = () => {
-    $("kvp-filters").querySelectorAll("button").forEach(x => x.classList.remove("active"));
+    $("kv-filters").querySelectorAll("button").forEach(x => x.classList.remove("active"));
     b.classList.add("active");
-    renderKvp(k);
+    gallery("kv-grid", KEY_VISUALS.filter(x => slug === "all" || x.slug === slug), "kv-item");
   };
-  $("kvp-filters").appendChild(b);
+  $("kv-filters").appendChild(b);
 });
 
 // ---------- Scroll reveals + counters ----------
@@ -120,7 +109,8 @@ const observe = root => root.querySelectorAll(".tile, .feat, .shot, [data-count]
   io.observe(el);
 });
 observe(home);
-renderKvp("All");
+gallery("kv-grid", KEY_VISUALS, "kv-item");
+gallery("print-grid", PRINTS, "print-item");
 function countUp(el) {
   const end = +el.dataset.count, t0 = performance.now();
   (function tick(t) {
