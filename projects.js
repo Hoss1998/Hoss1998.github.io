@@ -421,32 +421,17 @@ const CLIENTS = [
   "images": [
    {
     "src": "images/les-alpes/01.jpg",
-    "w": 1080,
-    "h": 1350
+    "w": 1600,
+    "h": 900
    },
    {
     "src": "images/les-alpes/02.jpg",
-    "w": 1080,
-    "h": 1350
+    "w": 1600,
+    "h": 900
    },
    {
     "src": "images/les-alpes/03.jpg",
-    "w": 1088,
-    "h": 1350
-   },
-   {
-    "src": "images/les-alpes/04.jpg",
-    "w": 1088,
-    "h": 1350
-   },
-   {
-    "src": "images/les-alpes/05.jpg",
-    "w": 1088,
-    "h": 1350
-   },
-   {
-    "src": "images/les-alpes/06.jpg",
-    "w": 1088,
+    "w": 1080,
     "h": 1350
    }
   ]
