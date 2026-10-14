@@ -108,18 +108,7 @@ const CLIENTS = [
   "slug": "dominos",
   "name": "Domino's",
   "industry": "Food & Beverage",
-  "images": [
-   {
-    "src": "images/dominos/01.jpg",
-    "w": 1600,
-    "h": 900
-   },
-   {
-    "src": "images/dominos/02.jpg",
-    "w": 1600,
-    "h": 900
-   }
-  ]
+  "images": []
  },
  {
   "slug": "ph",

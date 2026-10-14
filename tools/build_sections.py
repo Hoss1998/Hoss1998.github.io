@@ -23,12 +23,12 @@ KV = [  # (client slug, list index)
     *[("skoda", i) for i in (58, 59, 60)],
     *[("zanussi", i) for i in (61, 63)],
     # Extra KVs: absolute paths (PSD renders live in ~/portfolio-src/kv)
-    *[("bam", f"~/portfolio-src/kv/bam-{n}.png") for n in (1, 2, 3, 4, 5)],
+    *[("bam", f"~/portfolio-src/kv/bam-{n}.png") for n in (1, 2, 4)],
     ("ghabour-auto", "~/Desktop/Hoss/Ghabour Auto/Designs/U8/GB POST 3 1.png"),
 ]
 BILLBOARDS = [("kasrawy", i) for i in range(21, 26)]
 
-EXCLUDE = [30, 31, 37, 38, 47, 61, 63, 58, 59, 60, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 21, 22, 23, 24]  # removed at the user's request
+EXCLUDE = [30, 31, 37, 38, 47, 61, 63, 58, 59, 60, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 21, 22, 23, 24, 25]  # removed at the user's request
 KV = [p for p in KV if p[1] not in EXCLUDE]
 BILLBOARDS = [p for p in BILLBOARDS if p[1] not in EXCLUDE]
 

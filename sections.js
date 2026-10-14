@@ -215,18 +215,6 @@ const KEY_VISUALS = [
   "src": "images/kv/bam-03.jpg",
   "w": 1600,
   "h": 901
- },
- {
-  "slug": "bam",
-  "src": "images/kv/bam-04.jpg",
-  "w": 1600,
-  "h": 901
- },
- {
-  "slug": "bam",
-  "src": "images/kv/bam-05.jpg",
-  "w": 1600,
-  "h": 901
  }
 ];
 const PRINTS = [
@@ -283,11 +271,5 @@ const PRINTS = [
   "src": "images/zanussi/09.jpg",
   "w": 551,
   "h": 1580
- },
- {
-  "slug": "kasrawy",
-  "src": "images/print/kasrawy-01.jpg",
-  "w": 1600,
-  "h": 1066
  }
 ];
