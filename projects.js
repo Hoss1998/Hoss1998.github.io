@@ -729,28 +729,128 @@ const CLIENTS = [
    },
    {
     "src": "images/skoda/02.jpg",
-    "w": 1080,
-    "h": 1350
+    "w": 1280,
+    "h": 1600
    },
    {
     "src": "images/skoda/03.jpg",
-    "w": 1080,
-    "h": 1350
+    "w": 1280,
+    "h": 1600
    },
    {
     "src": "images/skoda/04.jpg",
-    "w": 1600,
-    "h": 900
+    "w": 1280,
+    "h": 1600
    },
    {
     "src": "images/skoda/05.jpg",
-    "w": 1080,
-    "h": 1350
+    "w": 1280,
+    "h": 1600
    },
    {
     "src": "images/skoda/06.jpg",
     "w": 1280,
     "h": 1600
+   },
+   {
+    "src": "images/skoda/07.jpg",
+    "w": 1289,
+    "h": 1600
+   },
+   {
+    "src": "images/skoda/08.jpg",
+    "w": 1289,
+    "h": 1600
+   },
+   {
+    "src": "images/skoda/09.jpg",
+    "w": 1289,
+    "h": 1600
+   },
+   {
+    "src": "images/skoda/10.jpg",
+    "w": 1289,
+    "h": 1600
+   },
+   {
+    "src": "images/skoda/11.jpg",
+    "w": 1289,
+    "h": 1600
+   },
+   {
+    "src": "images/skoda/12.jpg",
+    "w": 1080,
+    "h": 1350
+   },
+   {
+    "src": "images/skoda/13.jpg",
+    "w": 1197,
+    "h": 1600
+   },
+   {
+    "src": "images/skoda/14.jpg",
+    "w": 1197,
+    "h": 1600
+   },
+   {
+    "src": "images/skoda/15.jpg",
+    "w": 1080,
+    "h": 1350
+   },
+   {
+    "src": "images/skoda/16.jpg",
+    "w": 1080,
+    "h": 1350
+   },
+   {
+    "src": "images/skoda/17.jpg",
+    "w": 1080,
+    "h": 1350
+   },
+   {
+    "src": "images/skoda/18.jpg",
+    "w": 1080,
+    "h": 1350
+   },
+   {
+    "src": "images/skoda/19.jpg",
+    "w": 1080,
+    "h": 1350
+   },
+   {
+    "src": "images/skoda/20.jpg",
+    "w": 1080,
+    "h": 1350
+   },
+   {
+    "src": "images/skoda/21.jpg",
+    "w": 1080,
+    "h": 1350
+   },
+   {
+    "src": "images/skoda/22.jpg",
+    "w": 1080,
+    "h": 1350
+   },
+   {
+    "src": "images/skoda/23.jpg",
+    "w": 1080,
+    "h": 1350
+   },
+   {
+    "src": "images/skoda/24.jpg",
+    "w": 1080,
+    "h": 1350
+   },
+   {
+    "src": "images/skoda/25.jpg",
+    "w": 1080,
+    "h": 1350
+   },
+   {
+    "src": "images/skoda/26.jpg",
+    "w": 1080,
+    "h": 1350
    }
   ]
  },
