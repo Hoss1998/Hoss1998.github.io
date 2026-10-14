@@ -1029,15 +1029,10 @@ const CLIENTS = [
    {
     "src": "images/raha/03.jpg",
     "w": 1080,
-    "h": 1080
-   },
-   {
-    "src": "images/raha/04.jpg",
-    "w": 1080,
     "h": 1350
    },
    {
-    "src": "images/raha/05.jpg",
+    "src": "images/raha/04.jpg",
     "w": 1080,
     "h": 1350
    }
