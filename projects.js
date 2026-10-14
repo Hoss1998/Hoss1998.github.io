@@ -275,21 +275,6 @@ const CLIENTS = [
     "src": "images/bimbo/03.jpg",
     "w": 1080,
     "h": 1350
-   },
-   {
-    "src": "images/bimbo/04.jpg",
-    "w": 1080,
-    "h": 1350
-   },
-   {
-    "src": "images/bimbo/05.jpg",
-    "w": 1080,
-    "h": 1350
-   },
-   {
-    "src": "images/bimbo/06.jpg",
-    "w": 1080,
-    "h": 1350
    }
   ]
  },
