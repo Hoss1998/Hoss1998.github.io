@@ -11,6 +11,15 @@ const mark = c => LOGOS.has(c.slug)
   : `<span class="wordmark">${c.name}</span>`;
 
 $("year").textContent = new Date().getFullYear();
+
+// Experience durations, counted like LinkedIn (start month inclusive) so they stay current
+document.querySelectorAll("[data-from]").forEach(el => {
+  const [y, m] = el.dataset.from.split("-").map(Number), now = new Date();
+  const months = (now.getFullYear() - y) * 12 + now.getMonth() + 1 - m + 1;
+  const yrs = Math.floor(months / 12), mos = months % 12;
+  const len = [yrs && `${yrs} yr${yrs > 1 ? "s" : ""}`, mos && `${mos} mo${mos > 1 ? "s" : ""}`].filter(Boolean).join(" ");
+  el.textContent = el.textContent ? `${el.textContent} · ${len}` : len;
+});
 const industryCount = new Set(CLIENTS.map(c => c.industry)).size;
 document.querySelector("[data-count='9']").dataset.count = industryCount;
 $("client-count").textContent = CLIENTS.length + "+";

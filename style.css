@@ -143,6 +143,27 @@ h2 em { text-transform: none; font-size: 1.05em; }
 .tools li { border: 1px solid var(--line); padding: .45rem 1rem; border-radius: 99px; font-size: .8rem; color: #c9c4b8; transition: .3s; }
 .tools li:hover { background: var(--accent); color: var(--bg); border-color: var(--accent); }
 
+/* Experience */
+.experience { padding-top: 0; }
+.xp { list-style: none; max-width: 56rem; }
+.xp-co { display: grid; grid-template-columns: 84px 1fr; gap: 1.6rem; padding: 2.2rem 0; border-bottom: 1px solid var(--line); }
+.xp-co:first-child { padding-top: 0; }
+.xp-logo { width: 84px; aspect-ratio: 1; background: #000; border: 1px solid #1d1c19; border-radius: 6px; display: grid; place-items: center; overflow: hidden; }
+.xp-logo img { width: 78%; height: 60%; object-fit: contain; }
+.xp-logo span { font-family: var(--serif); font-style: italic; font-size: 1.05rem; line-height: 1; text-align: center; color: var(--fg); }
+.xp h3 { font-family: var(--display); font-weight: 400; font-size: clamp(1.5rem, 2.6vw, 2.2rem); text-transform: uppercase; line-height: 1.05; }
+.xp-meta { color: #c9c4b8; margin-top: .35rem; }
+.xp-loc { color: var(--muted); font-size: .9rem; }
+.xp-skills { margin-top: .9rem; font-size: .85rem; color: var(--fg); }
+.xp-roles { list-style: none; margin-top: 1.6rem; position: relative; }
+.xp-roles::before { content: ""; position: absolute; left: 4px; top: .7rem; bottom: 2.6rem; width: 1px; background: var(--line); }
+.xp-roles li { position: relative; padding-left: 1.8rem; }
+.xp-roles li + li { margin-top: 1.4rem; }
+.xp-roles li::before { content: ""; position: absolute; left: 0; top: .55rem; width: 9px; height: 9px; border-radius: 50%; background: var(--accent); }
+.xp-roles li + li::before { background: var(--muted); }
+.xp-roles b { display: block; font-weight: 500; font-size: 1.1rem; }
+.xp-roles span { color: var(--muted); font-size: .9rem; }
+
 /* Contact */
 .contact { padding: 10rem 4vw 8rem; border-top: 1px solid var(--line); }
 .mega { display: inline-flex; align-items: baseline; gap: .25em; font-family: var(--display); text-transform: uppercase; font-size: clamp(4.5rem, 16vw, 15rem); line-height: .9; margin: 1.5rem 0 3rem; }
@@ -193,7 +214,10 @@ footer a:hover { color: var(--accent); }
 @media (max-width: 800px) {
   .nav { padding: 1rem 5vw; }
   .nav nav { gap: 1rem; font-size: .75rem; }
-  .nav nav a[href="#/social"], .nav nav a[href="#/about"], .nav nav a[href="#/key-visuals"], .nav nav a[href="#/print"] { display: none; }
+  .nav nav a[href="#/social"], .nav nav a[href="#/about"], .nav nav a[href="#/key-visuals"], .nav nav a[href="#/print"], .nav nav a[href="#/experience"] { display: none; }
+  .xp-co { grid-template-columns: 56px 1fr; gap: 1rem; }
+  .xp-logo { width: 56px; }
+  .xp-logo span { font-size: .8rem; }
   .hero { padding-bottom: 7vh; }
   .scroll-cue { display: none; }
   .outline { -webkit-text-stroke-width: 1.5px; }
