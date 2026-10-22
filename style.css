@@ -148,8 +148,8 @@ h2 em { text-transform: none; font-size: 1.05em; }
 .xp { list-style: none; max-width: 56rem; }
 .xp-co { display: grid; grid-template-columns: 84px 1fr; gap: 1.6rem; padding: 2.2rem 0; border-bottom: 1px solid var(--line); }
 .xp-co:first-child { padding-top: 0; }
-.xp-logo { width: 84px; aspect-ratio: 1; background: #000; border: 1px solid #1d1c19; border-radius: 6px; display: grid; place-items: center; overflow: hidden; }
-.xp-logo img { width: 78%; height: 60%; object-fit: contain; }
+.xp-logo { width: 84px; aspect-ratio: 1; background: #000; border: 1px solid #2a2925; border-radius: 50%; display: grid; place-items: center; overflow: hidden; }
+.xp-logo img { width: 72%; height: 60%; object-fit: contain; }
 .xp-logo span { font-family: var(--serif); font-style: italic; font-size: 1.05rem; line-height: 1; text-align: center; color: var(--fg); }
 .xp h3 { font-family: var(--display); font-weight: 400; font-size: clamp(1.5rem, 2.6vw, 2.2rem); text-transform: uppercase; line-height: 1.05; }
 .xp-meta { color: #c9c4b8; margin-top: .35rem; }
