@@ -1,7 +1,7 @@
 const $ = id => document.getElementById(id);
 const V = u => `${u}?v=${window.ASSET_V}`;
 const home = $("home"), page = $("client-page"), lb = $("lightbox");
-const LOGOS = new Set(["bk","wendy-s","dominos","ph","dilli","coffee-beans","bam","bimbo","brika","domty","larch","les-alpes","ness","richland","saula","dosh","lindo","skoda","ghabour-auto","kasrawy","zanussi","it-worx","raha","egy-post","nis","lycee","ssm","tmg","frappit","sweet-slim","cea","ghandour-auto","invest-gate"]);
+const LOGOS = new Set(["bk","wendy-s","dominos","ph","dilli","coffee-beans","bam","bimbo","brika","domty","larch","les-alpes","ness","richland","saula","dosh","lindo","skoda","ghabour-auto","kasrawy","zanussi","it-worx","raha","egy-post","nis","lycee","ssm","tmg","frappit","sweet-slim","cea","ghandour-auto","invest-gate","sna"]);
 const link = c => `#/client/${c.slug}`;
 const hasWork = c => c.images.length > 0;
 const WORK = CLIENTS.filter(hasWork);

@@ -801,7 +801,7 @@ const CLIENTS = [
  },
  {
   "slug": "sna",
-  "name": "Mercedes-Benz · SNA",
+  "name": "Mercedes-Benz",
   "industry": "Automotive",
   "images": [
    {
