@@ -171,6 +171,15 @@ h2 em { text-transform: none; font-size: 1.05em; }
 .xp-roles b { display: block; font-weight: 500; font-size: 1.1rem; }
 .xp-roles span { color: var(--muted); font-size: .9rem; }
 
+/* Nationalities */
+.nations { padding-top: 0; }
+.nation-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 1.2rem; max-width: 56rem; }
+.nation { display: flex; align-items: center; gap: 1.6rem; padding: 1.6rem; border: 1px solid var(--line); border-radius: 6px; transition: border-color .3s; }
+.nation:hover { border-color: var(--accent); }
+.nation img { width: 96px; height: auto; border-radius: 4px; flex: none; }
+.nation b { display: block; font-family: var(--display); font-weight: 400; font-size: clamp(1.8rem, 3vw, 2.6rem); text-transform: uppercase; line-height: 1; }
+.nation span { color: var(--muted); font-size: .9rem; }
+
 /* Contact */
 .contact { padding: 10rem 4vw 8rem; border-top: 1px solid var(--line); }
 .mega { display: inline-flex; align-items: baseline; gap: .25em; font-family: var(--display); text-transform: uppercase; font-size: clamp(4.5rem, 16vw, 15rem); line-height: .9; margin: 1.5rem 0 3rem; }
