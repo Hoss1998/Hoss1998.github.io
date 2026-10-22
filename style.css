@@ -155,6 +155,13 @@ h2 em { text-transform: none; font-size: 1.05em; }
 .xp-meta { color: #c9c4b8; margin-top: .35rem; }
 .xp-loc { color: var(--muted); font-size: .9rem; }
 .xp-skills { margin-top: .9rem; font-size: .85rem; color: var(--fg); }
+.xp-logo.round { border: 0; border-radius: 50%; background: none; }
+.xp-logo.round img { width: 100%; height: 100%; }
+.xp-projects { margin-top: 1.6rem; }
+.xp-proj { display: flex; align-items: center; gap: 1rem; margin-top: .8rem; }
+.xp-proj img { width: 52px; height: 52px; flex: none; }
+.xp-proj b { display: block; font-weight: 500; font-size: 1.05rem; }
+.xp-proj span { color: var(--muted); font-size: .85rem; }
 .xp-roles { list-style: none; margin-top: 1.6rem; position: relative; }
 .xp-roles::before { content: ""; position: absolute; left: 4px; top: .7rem; bottom: 2.6rem; width: 1px; background: var(--line); }
 .xp-roles li { position: relative; padding-left: 1.8rem; }
