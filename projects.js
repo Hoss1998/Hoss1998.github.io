@@ -874,6 +874,12 @@ const CLIENTS = [
   ]
  },
  {
+  "slug": "ghandour-auto",
+  "name": "Ghandour Auto",
+  "industry": "Automotive",
+  "images": []
+ },
+ {
   "slug": "kasrawy",
   "name": "Kasrawy · Jetour",
   "industry": "Automotive",
@@ -1164,6 +1170,12 @@ const CLIENTS = [
   "slug": "cea",
   "name": "Cotton Egypt Association",
   "industry": "Textiles",
+  "images": []
+ },
+ {
+  "slug": "invest-gate",
+  "name": "Invest-Gate",
+  "industry": "Real Estate",
   "images": []
  }
 ];
